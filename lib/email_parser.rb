@@ -9,7 +9,6 @@ class EmailParser
 # or whitespace (' ').
 
   def initialize(emails)
-    @emails=emails
     self.all<<emails
   end
 
@@ -19,7 +18,7 @@ class EmailParser
 
   def self.parse
     self.all.each do |entry|
-      :emails<<entry.split(' ').split
+      :emails.push(entry.split(' ').split)
       binding.pry
     end
   end
