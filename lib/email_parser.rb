@@ -12,15 +12,15 @@ class EmailParser
     @@all<<emails.to_s
   end
 
-  def all
+  def self.all
     @@all
   end
 
-  def emails
+  def self.emails
     @@emails
   end
 
-  def parse
+  def self.parse
     @@all.each.to_s do |entry|
       self.emails<<entry.split(' ').split(',').to_s
       binding.pry
