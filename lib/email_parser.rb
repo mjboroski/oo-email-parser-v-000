@@ -16,10 +16,9 @@ class EmailParser
   end
 
   def parse
-    holder=[]
     @@all.each.to_s do |entry|
-      holder<<entry.split(' ').split(',').to_s
+      :emails<<entry.split(' ').split(',').to_s
     end
-    holder
+    :emails
   end
 end
