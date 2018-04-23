@@ -3,12 +3,12 @@ class EmailParser
   attr_accessor :emails
 
   @@all=[]
+  @@emails=[]
   #  that accepts a string of unformatted
 # emails. The parse method on the class should separate them into
 # unique email addresses.
 
   def initialize(emails)
-    @emails
     @@all<<emails.to_s
   end
 
@@ -16,10 +16,14 @@ class EmailParser
     @@all
   end
 
+  def emails
+    @@emails
+  end
+
   def parse
     @@all.each.to_s do |entry|
-      @emails<<entry.split(' ').split(',').to_s
+      self.emails<<entry.split(' ').split(',').to_s
     end
-    @emails
+    self.emails
   end
 end
