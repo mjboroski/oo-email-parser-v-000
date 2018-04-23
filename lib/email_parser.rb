@@ -9,7 +9,12 @@ class EmailParser
 # or whitespace (' ').
 
   def initialize(emails)
+    @emails=emails
+    self.all<<emails
+  end
 
+  def all
+    @@all
   end
 
   def self.parse
