@@ -20,7 +20,6 @@ class EmailParser
     holder=[]
     self.all.flatten.each do |entry|
       holder<<entry.split(' ').split.to_s
-      binding.pry
     end
   end
 end
