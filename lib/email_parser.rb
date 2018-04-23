@@ -2,7 +2,7 @@ class EmailParser
 
   attr_accessor :emails
 
-  @@all={}
+  @@all=[]
   #  that accepts a string of unformatted
 # emails. The parse method on the class should separate them into
 # unique email addresses. The delimiters to support are commas (',')
@@ -18,7 +18,7 @@ class EmailParser
 
   def self.parse
     holder=[]
-    self.all.each do |entry|
+    self.all.flatten.each do |entry|
       holder<<entry.split(' ').split.to_s
       binding.pry
     end
