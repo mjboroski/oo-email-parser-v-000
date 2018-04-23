@@ -18,8 +18,8 @@ class EmailParser
 
   def parse
     @@all.each.to_s do |entry|
-      :emails<<entry.split(' ').split(',').to_s
+      @emails<<entry.split(' ').split(',').to_s
     end
-    :emails
+    @emails
   end
 end
