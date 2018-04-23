@@ -5,8 +5,7 @@ class EmailParser
   @@all=[]
   #  that accepts a string of unformatted
 # emails. The parse method on the class should separate them into
-# unique email addresses. The delimiters to support are commas (',')
-# or whitespace (' ').
+# unique email addresses. 
 
   def initialize(emails)
     @@all<<emails.to_s
@@ -18,8 +17,8 @@ class EmailParser
 
   def self.parse
     holder=[]
-    self.all.flatten.each do |entry|
-      holder<<entry.split(' ').split.to_s
+    @@all.each do |entry|
+      holder<<entry.split(' ').split(',').to_s
     end
   end
 end
