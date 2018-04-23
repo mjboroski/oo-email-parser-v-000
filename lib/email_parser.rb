@@ -8,6 +8,7 @@ class EmailParser
 # unique email addresses.
 
   def initialize(emails)
+    @emails
     @@all<<emails.to_s
   end
 
