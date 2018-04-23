@@ -20,5 +20,6 @@ class EmailParser
     @@all.each.to_s do |entry|
       holder<<entry.split(' ').split(',').to_s
     end
+    holder
   end
 end
