@@ -13,13 +13,14 @@ class EmailParser
     self.all<<emails
   end
 
-  def self.all
+  def all
     @@all
   end
 
   def self.parse
     self.all.each do |entry|
       :emails<<entry.split(' ').split
+      binding.pry
     end
   end
 end
