@@ -5,7 +5,7 @@ class EmailParser
   @@all=[]
   #  that accepts a string of unformatted
 # emails. The parse method on the class should separate them into
-# unique email addresses. 
+# unique email addresses.
 
   def initialize(emails)
     @@all<<emails.to_s
