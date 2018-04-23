@@ -9,7 +9,7 @@ class EmailParser
 # or whitespace (' ').
 
   def initialize(emails)
-    self.all.push(emails.to_s)
+    self.all<<emails.to_s
   end
 
   def all
