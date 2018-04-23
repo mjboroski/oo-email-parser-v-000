@@ -21,7 +21,7 @@ class EmailParser
   end
 
   def self.parse
-    @@all.each.to_s do |entry|
+    self.all.each.to_s do |entry|
       self.emails<<entry.split(' ').split(',').to_s
       binding.pry
     end
